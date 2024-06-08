@@ -1,7 +1,13 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from '@next/font/local'
 
 const inter = Inter({ subsets: ["latin"] });
+const supreme = localFont({
+    src: '../public/fonts/Futura Book font.ttf',
+    variable: "--font-supreme"
+
+  })
 
 export const metadata = {
   title: "Create Next App",
@@ -10,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${supreme.variable}`}>
       <body className={inter.className}>{children}</body>
     </html>
   );
