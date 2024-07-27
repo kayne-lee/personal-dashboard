@@ -51,14 +51,14 @@ const Header = () => {
 
   return (
     <motion.div
-        className="text-black flex flex-col align-center justify-center p-4 text-center"
+        className="text-white flex flex-col align-center gap-2 justify-center p-4 text-center"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
     >
-        <h1 className="font-supreme text-5xl">{timeOfDay}, Kayne</h1>
-        <p className="font-sans text-xl">It is {currentTime}.</p>
-        <blockquote className="font-sans text-xl">{quote}</blockquote>
+      <h1 className="font-supreme text-5xl">{timeOfDay}, Kayne</h1>
+      <p className="font-sans text-xl">It is {currentTime}.</p>
+      <blockquote className="font-sans text-xl">{quote}</blockquote>
     </motion.div>
   );
 };
